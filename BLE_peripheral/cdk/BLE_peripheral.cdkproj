@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project Name="BLE_peripheral" Version="1" Language="C" Type="Application Without OS">
+  <Description/>
+  <Dependencies Name="Debug"/>
+  <MonitorProgress>
+    <DebugLaunch>104</DebugLaunch>
+    <FlashOperate>94</FlashOperate>
+  </MonitorProgress>
+  <VendorInfo>
+    <VendorName>NULL</VendorName>
+  </VendorInfo>
+  <ToolsConfig>
+    <Compiler>
+      <Name>XTGccElfNewlib</Name>
+      <Version>latest</Version>
+    </Compiler>
+  </ToolsConfig>
+  <VirtualDirectory Name="app">
+    <File Name="../main.c">
+      <FileOption/>
+    </File>
+    <File Name="../app_main.c">
+      <FileOption/>
+    </File>
+    <File Name="../app_isr.c">
+      <FileOption/>
+    </File>
+  </VirtualDirectory>
+  <VirtualDirectory Name="modules">
+    <VirtualDirectory Name="hal_clock">
+      <File Name="../../../modules/hal_clock/hal_clock.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../modules/hal_clock/hal_clock.h">
+        <FileOption/>
+      </File>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="components">
+    <VirtualDirectory Name="flash_algorithm">
+      <File Name="../../../components/flash_algorithm/dl2flash.elf">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/flash_algorithm/dl2flash_NoFlashInit.elf">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/flash_algorithm/dl2flash_no_flash_pin_init.elf">
+        <FileOption/>
+      </File>
+    </VirtualDirectory>
+    <VirtualDirectory Name="header">
+      <File Name="../../../components/header/config.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/core_rv32.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/csi_rv32_gcc.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/global.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/include.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/mcu.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/mcu_reg_def.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/header/typedef.h">
+        <FileOption/>
+      </File>
+    </VirtualDirectory>
+    <VirtualDirectory Name="libraries">
+      <File Name="../../../components/libraries/api.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/libraries/libstartlib.a">
+        <FileOption/>
+      </File>
+      <VirtualDirectory Name="ble">
+        <File Name="../../../components/libraries/ble/addr.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/adv.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/api_stack_ble2g4.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/att.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/bt_assert.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/bt_buf.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/bt_common.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/bt_err.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/bt_errno.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/bt_gcc.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/byteorder.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/conn.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/controller.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/dlist.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/ecc.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/gap_def.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/gatt.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/h4_controller.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/hci_core.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/hci_def.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/hci_driver.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/hci_vs.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/host.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/keys.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/ll.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/pdu.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/simple_buf.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/slist.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/smp.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/sys_timeout.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/sys_timer.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/uuid.h">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/libble.a">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/libble_base.a">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/libraries/ble/api_blestack.h">
+          <FileOption/>
+        </File>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="misc">
+      <File Name="../../../components/misc/log_dbg.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/misc/log_dbg.h">
+        <FileOption/>
+      </File>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ble">
+      <VirtualDirectory Name="ota_service">
+        <File Name="../../../components/ble/ota_service/ble_ota_service.c">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/ble/ota_service/ble_ota_service.h">
+          <FileOption/>
+        </File>
+      </VirtualDirectory>
+      <VirtualDirectory Name="service">
+        <File Name="../../../components/ble/service/ble_service.c">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/ble/service/ble_service.h">
+          <FileOption/>
+        </File>
+      </VirtualDirectory>
+      <VirtualDirectory Name="app">
+        <File Name="../../../components/ble/app/ble_app.c">
+          <FileOption/>
+        </File>
+        <File Name="../../../components/ble/app/ble_app.h">
+          <FileOption/>
+        </File>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="driver">
+      <File Name="../../../components/driver/driver_clkcal.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_clkcal.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_flash.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_gpadc.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_gpadc.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_gpio.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_gpio.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_iic.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_iic.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_spim.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_spim.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_spis.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_spis.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_sys.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_sys.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_timer.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_timer.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_uart.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_uart.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_wdt.c">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_wdt.h">
+        <FileOption/>
+      </File>
+      <File Name="../../../components/driver/driver_flash.c">
+        <FileOption/>
+      </File>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <DebugSessions>
+    <watchExpressions>rf_2g4_mgr:1</watchExpressions>
+    <memoryExpressions>0xE000BFF8;0x200000fc;0x42000000;0x20000a1c</memoryExpressions>
+    <statistics>;;32;;MHZ;;up</statistics>
+    <peripheralTabs/>
+    <WatchDisplayFormat>1</WatchDisplayFormat>
+    <LocalDisplayFormat>1</LocalDisplayFormat>
+    <debugLayout/>
+    <memoryTabColSizeExpressions>100:8;100:8;100:8;100:8;</memoryTabColSizeExpressions>
+    <QuickWatchDisplayFormat>1</QuickWatchDisplayFormat>
+  </DebugSessions>
+  <BuildConfigs>
+    <BuildConfig Name="BuildSet">
+      <Target>
+        <ROMBank Selected="1">
+          <ROM1>
+            <InUse>no</InUse>
+            <Start>0x0</Start>
+            <Size>0x20000</Size>
+          </ROM1>
+          <ROM2>
+            <InUse>no</InUse>
+            <Start/>
+            <Size/>
+          </ROM2>
+          <ROM3>
+            <InUse>no</InUse>
+            <Start/>
+            <Size/>
+          </ROM3>
+          <ROM4>
+            <InUse>no</InUse>
+            <Start/>
+            <Size/>
+          </ROM4>
+          <ROM5>
+            <InUse>no</InUse>
+            <Start/>
+            <Size/>
+          </ROM5>
+        </ROMBank>
+        <RAMBank>
+          <RAM1>
+            <InUse>yes</InUse>
+            <Start>0x20000000</Start>
+            <Size>0x80000</Size>
+            <Init>yes</Init>
+          </RAM1>
+          <RAM2>
+            <InUse>no</InUse>
+            <Start>0x50000000</Start>
+            <Size>0x800000</Size>
+            <Init>yes</Init>
+          </RAM2>
+          <RAM3>
+            <InUse>no</InUse>
+            <Start>0x60000000</Start>
+            <Size>0x20000</Size>
+            <Init>yes</Init>
+          </RAM3>
+          <RAM4>
+            <InUse>no</InUse>
+            <Start/>
+            <Size/>
+            <Init>yes</Init>
+          </RAM4>
+          <RAM5>
+            <InUse>no</InUse>
+            <Start/>
+            <Size/>
+            <Init>yes</Init>
+          </RAM5>
+        </RAMBank>
+        <CPU>e902m</CPU>
+        <UseMiniLib>yes</UseMiniLib>
+        <Endian>little</Endian>
+        <UseHardFloat>no</UseHardFloat>
+        <UseEnhancedLRW>no</UseEnhancedLRW>
+        <UseContinueBuild>no</UseContinueBuild>
+        <UseSemiHost>no</UseSemiHost>
+      </Target>
+      <Output>
+        <OutputName>$(ProjectName)</OutputName>
+        <Type>Executable</Type>
+        <CreateHexFile>yes</CreateHexFile>
+        <CreateBinFile>yes</CreateBinFile>
+        <Preprocessor>no</Preprocessor>
+        <Disassmeble>yes</Disassmeble>
+        <CallGraph>no</CallGraph>
+        <Map>yes</Map>
+      </Output>
+      <User>
+        <BeforeCompile>
+          <RunUserProg>no</RunUserProg>
+          <UserProgName/>
+          <IsBatchScript>no</IsBatchScript>
+        </BeforeCompile>
+        <BeforeMake>
+          <RunUserProg>no</RunUserProg>
+          <UserProgName/>
+          <IsBatchScript>no</IsBatchScript>
+        </BeforeMake>
+        <AfterMake>
+          <RunUserProg>no</RunUserProg>
+          <UserProgName/>
+          <IsBatchScript>no</IsBatchScript>
+        </AfterMake>
+        <Tools/>
+      </User>
+      <Compiler>
+        <Define>BLE_FOTA_EN=1;BLE_MODE_SEL=1;BLE_SLEEP_EN=1;</Define>
+        <Undefine/>
+        <Optim>Optimize size (-Os)</Optim>
+        <DebugLevel>None</DebugLevel>
+        <IncludePath>$(ProjectPath)/../;$(ProjectPath)/../../../components/ble/app;$(ProjectPath)/../../../components/ble/ota_service;$(ProjectPath)/../../../components/ble/service;$(ProjectPath)/../../../components/core/;$(ProjectPath)/../../../components/core/riscv/E902;$(ProjectPath)/../../../components/driver;$(ProjectPath)/../../../components/header;$(ProjectPath)/../../../components/libraries;$(ProjectPath)/../../../components/libraries/24g;$(ProjectPath)/../../../components/libraries/ble;$(ProjectPath)/../../../components/misc;$(ProjectPath)/../../../modules/hal_clock</IncludePath>
+        <OtherFlags>-ffunction-sections -fdata-sections -flto</OtherFlags>
+        <Verbose>no</Verbose>
+        <Ansi>no</Ansi>
+        <Syntax>no</Syntax>
+        <Pedantic>no</Pedantic>
+        <PedanticErr>no</PedanticErr>
+        <InhibitWarn>no</InhibitWarn>
+        <AllWarn>yes</AllWarn>
+        <WarnErr>no</WarnErr>
+        <OneElfS>no</OneElfS>
+        <OneElfSPerData>no</OneElfSPerData>
+        <Fstrict>no</Fstrict>
+      </Compiler>
+      <Asm>
+        <Define/>
+        <Undefine/>
+        <IncludePath>$(ProjectPath)/../;$(ProjectPath)/../../../components/ble/ota_service;$(ProjectPath)/../../../components/ble/service;$(ProjectPath)/../../../components/core/;$(ProjectPath)/../../../components/core/riscv/E902;$(ProjectPath)/../../../components/driver;$(ProjectPath)/../../../components/header;$(ProjectPath)/../../../components/libraries;$(ProjectPath)/../../../components/libraries/24g;$(ProjectPath)/../../../components/libraries/ble;$(ProjectPath)/../../../components/misc;$(ProjectPath)/../../../modules/hal_clock</IncludePath>
+        <OtherFlags>-ffunction-sections -fdata-sections</OtherFlags>
+        <DebugLevel>gdwarf2</DebugLevel>
+      </Asm>
+      <Linker>
+        <Garbage>yes</Garbage>
+        <Garbage2>yes</Garbage2>
+        <LDFile>$(ProjectPath)/../../../components/core/cp800x_ble2g4_app.ld</LDFile>
+        <LibName/>
+        <LibPath>../../../components/libraries/ble/</LibPath>
+        <OtherFlags>--specs=nano.specs -flto</OtherFlags>
+        <AutoLDFile>no</AutoLDFile>
+        <LinkType/>
+        <IncludeAllLibs>no</IncludeAllLibs>
+        <LinkSpecsType>none</LinkSpecsType>
+        <LinkUseNewlibNano>no</LinkUseNewlibNano>
+      </Linker>
+      <Debug>
+        <LoadApplicationAtStartup>yes</LoadApplicationAtStartup>
+        <Connector>ICE</Connector>
+        <StopAt>yes</StopAt>
+        <StopAtText>main</StopAtText>
+        <InitFile/>
+        <PreInit/>
+        <AfterLoadFile/>
+        <AutoRun>yes</AutoRun>
+        <ResetType>Soft Reset</ResetType>
+        <SoftResetVal>2</SoftResetVal>
+        <ResetAfterLoad>yes</ResetAfterLoad>
+        <AfterResetFile/>
+        <Dumpcore>no</Dumpcore>
+        <DumpcoreText/>
+        <SVCFile/>
+        <ConfigICE>
+          <IP>localhost</IP>
+          <PORT>1025</PORT>
+          <CPUNumber>0</CPUNumber>
+          <Clock>12000</Clock>
+          <Delay>10</Delay>
+          <NResetDelay>100</NResetDelay>
+          <WaitReset>50</WaitReset>
+          <DDC>yes</DDC>
+          <TRST>yes</TRST>
+          <PreReset>no</PreReset>
+          <DebugPrint>no</DebugPrint>
+          <Connect>Normal</Connect>
+          <ResetType>nReset</ResetType>
+          <SoftResetVal>0</SoftResetVal>
+          <RTOSType>Bare Metal</RTOSType>
+          <DownloadToFlash>yes</DownloadToFlash>
+          <ResetAfterConnect>no</ResetAfterConnect>
+          <GDBName/>
+          <GDBServerType>Local</GDBServerType>
+          <OtherFlags/>
+          <ICEEnablePCSampling>no</ICEEnablePCSampling>
+          <ICESamplingFreq>1000</ICESamplingFreq>
+          <RemoteICEEnablePCSampling>no</RemoteICEEnablePCSampling>
+          <RemoteICESamplingPort>1026</RemoteICESamplingPort>
+          <Version>latest</Version>
+          <SupportRemoteICEAsyncDebug>no</SupportRemoteICEAsyncDebug>
+        </ConfigICE>
+        <ConfigSIM>
+          <SIMTarget/>
+          <OtherFlags/>
+          <NoGraphic>yes</NoGraphic>
+          <Log>no</Log>
+          <SimTrace>no</SimTrace>
+          <Version>latest</Version>
+        </ConfigSIM>
+        <ConfigOpenOCD>
+          <OpenOCDExecutablePath/>
+          <OpenOCDLocally>yes</OpenOCDLocally>
+          <OpenOCDTelnetPortEnable>no</OpenOCDTelnetPortEnable>
+          <OpenOCDTelnetPort>4444</OpenOCDTelnetPort>
+          <OpenOCDTclPortEnable>no</OpenOCDTclPortEnable>
+          <OpenOCDTclPort>6666</OpenOCDTclPort>
+          <OpenOCDConfigOptions/>
+          <OpenOCDTimeout>5000</OpenOCDTimeout>
+          <OpenOCDRemoteIP>localhost</OpenOCDRemoteIP>
+          <OpenOCDRemotePort>3333</OpenOCDRemotePort>
+          <PluginID>openocd-sifive</PluginID>
+          <Version>latest</Version>
+        </ConfigOpenOCD>
+      </Debug>
+      <Flash>
+        <InitFile/>
+        <PreInit/>
+        <Erase>Erase Sectors</Erase>
+        <Algorithms Path="">$(ProjectPath)/../../../components/flash_algorithm/dl2flash_no_flash_pin_init.elf</Algorithms>
+        <Program>yes</Program>
+        <Verify>yes</Verify>
+        <ResetAndRun>yes</ResetAndRun>
+        <ResetType>Soft Reset</ResetType>
+        <SoftResetVal>2</SoftResetVal>
+        <FlashIndex>no</FlashIndex>
+        <FlashIndexVal>0</FlashIndexVal>
+        <External>no</External>
+        <Command/>
+        <Arguments/>
+      </Flash>
+    </BuildConfig>
+  </BuildConfigs>
+</Project>
